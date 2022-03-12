@@ -1,0 +1,149 @@
+GET http://localhost:3004/
+
+###
+
+GET http://localhost:3004/api/user
+
+
+###
+
+POST http://localhost:3004/api/name
+Content-Type: application/json
+
+{
+    "userName" : "bla"
+}
+
+
+
+###
+
+POST http://localhost:3004/users/login
+Content-Type: application/json
+
+{
+    "username" : "Meital12",
+    "password" : "12345"
+}
+
+###
+
+GET http://localhost:3004/users
+Content-Type: application/json
+
+{
+}
+###
+
+POST http://localhost:3004/users/add
+Content-Type: application/json
+
+{
+    "user" : {
+        "username" : "Meital12",
+        "password" : "12345",
+        "firstName" : "new User",
+        "lastName": "Bla",
+    "birthday": "2021-09-20T14:52:03.918+00:00",
+    "maritalStatus" : "Single",
+    "children": 0,
+        "pets": 0
+    }
+}
+
+###
+
+POST http://localhost:3004/users/update
+Content-Type: application/json
+
+{
+    "user" : {
+        "username" : "blabla3",
+        "password" : "12345",
+        "firstname" : "Meital",
+        "lastname": "BlaBla",
+    "birthday": "2021-09-20T14:52:03.918+00:00",
+    "material_statuses" : "Single",
+    "num_kids": 0,
+        "num_pets": 0
+    }
+}
+
+###
+
+GET http://localhost:3004/users?username=FirstUser
+Content-Type: application/json
+
+{
+}
+
+
+###
+
+GET http://localhost:3004/userCosts/id=5
+Content-Type: application/json
+
+{
+}
+
+###
+
+GET http://localhost:3004/userCosts/username=5
+Content-Type: application/json
+
+{
+}
+
+
+
+
+
+###
+
+POST http://localhost:3004/userCosts/add
+Content-Type: application/json
+
+{
+        "userCost" : {
+            "username" : "temp",
+            "description" : "new UsrCosts 13",
+            "sum" : 22.4,
+            "date" : "2021-09-20T14:52:03.918+00:00",
+            "category" : "Food"
+        }
+}
+
+
+###
+
+POST http://localhost:3004/userCosts/update
+Content-Type: application/json
+
+{
+        "userCost" : {
+            "_id": "6149cc325c4fcf5c81a5ee45",
+            "username" : "temp",
+            "description" : "updated",
+            "sum" : 111,
+            "date" : "2021-09-20T14:52:03.918+00:00",
+            "category" : "Food"
+        }
+}
+
+###
+
+DELETE http://localhost:3004/userCosts?id=6149cf275a1b4a662aab0f1d
+Content-Type: application/json
+
+{
+}
+
+
+
+###
+
+GET http://localhost:3004/userCosts/user?username=temp&from=2021-09-25&to=2021-09-25
+Content-Type: application/json
+
+{
+}
